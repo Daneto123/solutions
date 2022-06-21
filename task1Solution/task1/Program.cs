@@ -21,10 +21,10 @@ namespace task1
 
         static void Main(string[] args)
         {
-            var filePath = @"C:\Users\dancho\Downloads\input.txt";
+            // test file - bin/Debug/input.txt
+            var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\input.txt");
 
             var text = MovieStar.PrintText(filePath).ToString();
-            //Console.WriteLine(text);
 
             List<MovieStar> account = JsonConvert.DeserializeObject<List<MovieStar>>(text);
 
